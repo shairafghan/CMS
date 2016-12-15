@@ -1,4 +1,5 @@
 # README
+This is the Clinic Managements System
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
