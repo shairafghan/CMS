@@ -1,0 +1,1 @@
+json.array! @prescribtions, partial: 'prescribtions/prescribtion', as: :prescribtion

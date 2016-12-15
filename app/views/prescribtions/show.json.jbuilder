@@ -1,0 +1,1 @@
+json.partial! "prescribtions/prescribtion", prescribtion: @prescribtion

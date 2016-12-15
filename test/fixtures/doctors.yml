@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doc_name: MyString
+  doc_office_no: 1
+  doc_fee: MyString
+  specialty: one
+
+two:
+  doc_name: MyString
+  doc_office_no: 1
+  doc_fee: MyString
+  specialty: two

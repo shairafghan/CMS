@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pat_name: MyString
+  pat_gender: MyString
+  pat_dob: 2016-12-14
+  pat_address: MyText
+
+two:
+  pat_name: MyString
+  pat_gender: MyString
+  pat_dob: 2016-12-14
+  pat_address: MyText
