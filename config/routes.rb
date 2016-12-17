@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home_page/home'
+
   root "receptionists#index"
   resources :prescribtion_details
   resources :prescribtions
