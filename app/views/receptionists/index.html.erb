@@ -5,7 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Rec name</th>
+      <th>Rec name </th>
+      <th>email </th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @receptionists.each do |receptionist| %>
       <tr>
         <td><%= receptionist.rec_name %></td>
+        <td><%= receptionist.email %></td>
         <td><%= link_to 'Show', receptionist %></td>
         <td><%= link_to 'Edit', edit_receptionist_path(receptionist) %></td>
         <td><%= link_to 'Destroy', receptionist, method: :delete, data: { confirm: 'Are you sure?' } %></td>

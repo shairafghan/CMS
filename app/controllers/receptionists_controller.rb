@@ -69,6 +69,6 @@ class ReceptionistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def receptionist_params
-      params.require(:receptionist).permit(:rec_name)
+      params.require(:receptionist).permit(:rec_name, :email)
     end
 end

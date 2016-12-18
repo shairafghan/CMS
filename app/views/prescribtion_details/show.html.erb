@@ -2,12 +2,22 @@
 
 <p>
   <strong>Prescribtion:</strong>
-  <%= @prescribtion_detail.prescribtion %>
+  <%= @prescribtion_detail.prescribtion.id%>
 </p>
 
 <p>
   <strong>Medication:</strong>
-  <%= @prescribtion_detail.medication %>
+  <%= @prescribtion_detail.medication.md_name %>
+</p>
+
+<p>
+  <strong>Medication:</strong>
+  <%= @prescribtion_detail.dosage %>
+</p>
+
+<p>
+  <strong>Medication:</strong>
+  <%= @prescribtion_detail.duration %>
 </p>
 
 <%= link_to 'Edit', edit_prescribtion_detail_path(@prescribtion_detail) %> |

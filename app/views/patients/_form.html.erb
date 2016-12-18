@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :pat_gender %>
-    <%= f.text_field :pat_gender %>
+    <%= f.select :pat_gender,  Patient::GENDER_TYPES %>
   </div>
 
   <div class="field">

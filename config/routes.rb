@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'home_page/home'
 
-  root "receptionists#index"
+  root "home_page#home"
   resources :prescribtion_details
   resources :prescribtions
   resources :medications

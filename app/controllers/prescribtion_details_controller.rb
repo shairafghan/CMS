@@ -69,6 +69,6 @@ class PrescribtionDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prescribtion_detail_params
-      params.require(:prescribtion_detail).permit(:prescribtion_id, :medication_id)
+      params.require(:prescribtion_detail).permit(:prescribtion_id, :medication_id, :dosage, :duration)
     end
 end
