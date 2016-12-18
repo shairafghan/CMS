@@ -1,3 +1,5 @@
+<h1 align="center">Signup as receptionist</h1>
+
 <%= form_for(receptionist) do |f| %>
   <% if receptionist.errors.any? %>
     <div id="error_explanation">
@@ -19,6 +21,16 @@
   <div class="field">
     <%= f.label :email %>
     <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation,"Confirm Password" %>
+    <%= f.password_field :password_confirmation %>
   </div>
 
   <div class="actions">

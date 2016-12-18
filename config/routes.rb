@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  get 'doctor_signup', to: 'doctors#new'
+  get 'receptionist_signup', to: 'receptionists#new'
   get 'home_page/home'
-
   root "home_page#home"
   resources :prescribtion_details
   resources :prescribtions

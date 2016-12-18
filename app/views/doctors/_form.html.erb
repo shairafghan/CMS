@@ -1,3 +1,5 @@
+<h1 align="center">Signup as doctor</h1>
+
 <%= form_for(doctor) do |f| %>
   <% if doctor.errors.any? %>
     <div id="error_explanation">
@@ -34,6 +36,16 @@
   <div class="field">
     <%= f.label :specialty_id %>
     <%= f.text_field :specialty_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation,"Confirma Password" %>
+    <%= f.password_field :password_confirmation %>
   </div>
 
   <div class="actions">
