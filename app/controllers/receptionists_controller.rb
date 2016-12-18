@@ -1,5 +1,7 @@
 class ReceptionistsController < ApplicationController
   before_action :set_receptionist, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_receptionist_method, only: [:edit, :update, :destroy]
+  before_action :correct_receptionist, only: [:edit, :update, :destroy]
 
   # GET /receptionists
   # GET /receptionists.json
@@ -70,6 +72,19 @@ class ReceptionistsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def receptionist_params
       params.require(:receptionist).permit(:rec_name, :email,:password,
-:password_confirmation)
+      :password_confirmation)
+    end
+
+    def logged_in_receptionist_method
+      unless logged_in_receptionist?
+        flash[:danger] = "Please log in."
+        redirect_to login_receptionist_url
+      end
+    end
+
+    def correct_receptionist
+      @receptionist = Receptionist.find(params[:id])
+      # redirect_to(root_url) unless current_user?(@user)
+      redirect_to(root_url) unless @receptionist == current_receptionist
     end
 end

@@ -1,5 +1,7 @@
 class DoctorsController < ApplicationController
   before_action :set_doctor, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_doctor_method, only: [:edit, :update, :destroy]
+  before_action :correct_doctor, only: [:edit, :update, :destroy]
 
   # GET /doctors
   # GET /doctors.json
@@ -70,6 +72,19 @@ class DoctorsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def doctor_params
       params.require(:doctor).permit(:doc_name, :email, :doc_office_no, :doc_fee, :specialty_id,:password,
-:password_confirmation)
+      :password_confirmation)
+    end
+
+    def logged_in_doctor_method
+      unless logged_in_doctor?
+        flash[:danger] = "Please log in."
+        redirect_to login_doctor_url
+      end
+    end
+
+    def correct_doctor
+      @doctor = Doctor.find(params[:id])
+      # redirect_to(root_url) unless current_user?(@user)
+      redirect_to(root_url) unless @doctor == current_doctor
     end
 end
