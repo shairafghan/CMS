@@ -1,3 +1,4 @@
+
 <%= form_for(appointment) do |f| %>
   <% if appointment.errors.any? %>
     <div id="error_explanation">
@@ -11,29 +12,30 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= f.label :patient_id %>
-    <%= f.text_field :patient_id %>
+    <%= f.text_field :patient_id, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :doctor_id %>
-    <%= f.text_field :doctor_id %>
+    <%= f.text_field :doctor_id, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :ap_date %>
-    <%= f.date_select :ap_date %>
+    <%= f.date_select :ap_date, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :ap_time %>
-    <%= f.time_select :ap_time %>
+    <%= f.time_select :ap_time, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :receptionist_id %>
-    <%= f.text_field :receptionist_id %>
+    <%= f.text_field :receptionist_id, class: 'form-control' %>
   </div>
 
   <div class="actions">

@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= f.label :patient_id %>
-    <%= f.text_field :patient_id %>
+    <%= f.text_field :patient_id, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :doctor_id %>
-    <%= f.text_field :doctor_id %>
+    <%= f.text_field :doctor_id, class: 'form-control' %>
   </div>
   <div class="actions">
     <%= link_to "Medication", new_prescribtion_detail_path %>
