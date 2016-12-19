@@ -1,24 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Pat name:</strong>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Date of birth</th>
+      <th>address</th>
+    </tr>
+  </thead>
+
+</tbody>
+<td>
   <%= @patient.pat_name %>
-</p>
+</td>
 
-<p>
-  <strong>Pat gender:</strong>
+<td>
   <%= @patient.pat_gender %>
-</p>
+</td>
 
-<p>
-  <strong>Pat dob:</strong>
+<td>
   <%= @patient.pat_dob %>
-</p>
+</td>
 
-<p>
-  <strong>Pat address:</strong>
+<td>
   <%= @patient.pat_address %>
-</p>
+</td>
+</tbody>
+</table>
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>

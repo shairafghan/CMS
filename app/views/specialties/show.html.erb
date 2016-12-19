@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Sp name:</strong>
-  <%= @specialty.sp_name %>
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Describtion</th>
+    </tr>
+  </thead>
+  <tbody>
 
-<p>
-  <strong>Sp description:</strong>
+<td>
+  <%= @specialty.sp_name %>
+</td>
+
+<td>
   <%= @specialty.sp_description %>
-</p>
+</td>
+</tbody>
+</table>
 
 <%= link_to 'Edit', edit_specialty_path(@specialty) %> |
 <%= link_to 'Back', specialties_path %>

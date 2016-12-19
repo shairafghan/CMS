@@ -1,24 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Prescribtion:</strong>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Prescribtion</th>
+      <th>Medication</th>
+      <th>Dosage</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+<td>
   <%= @prescribtion_detail.prescribtion.id%>
-</p>
+</td>
 
-<p>
-  <strong>Medication:</strong>
+<td>
   <%= @prescribtion_detail.medication.md_name %>
-</p>
+</td>
 
-<p>
-  <strong>Medication:</strong>
+<td>
   <%= @prescribtion_detail.dosage %>
-</p>
+</td>
 
-<p>
-  <strong>Medication:</strong>
+<td>
   <%= @prescribtion_detail.duration %>
-</p>
+</td>
+</tbody>
+</table>
 
 <%= link_to 'Edit', edit_prescribtion_detail_path(@prescribtion_detail) %> |
 <%= link_to 'Back', prescribtion_details_path %>

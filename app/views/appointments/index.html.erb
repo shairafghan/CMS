@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Appointments</h1>
+<h1 align="center">Appointments</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Patient</th>
@@ -17,11 +17,11 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
-        <td><%= appointment.patient %></td>
-        <td><%= appointment.doctor %></td>
+        <td><%= appointment.patient.pat_name %></td>
+        <td><%= appointment.doctor.doc_name %></td>
         <td><%= appointment.ap_date %></td>
         <td><%= appointment.ap_time %></td>
-        <td><%= appointment.receptionist %></td>
+        <td><%= appointment.receptionist.rec_name %></td>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

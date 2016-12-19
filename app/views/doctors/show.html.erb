@@ -1,29 +1,38 @@
+
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Doc name:</strong>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>email</th>
+      <th>Office NO</th>
+      <th>Fee</th>
+      <th>specialty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+<td>
   <%= @doctor.doc_name %>
-</p>
+<td>
 
-<p>
-  <strong>email:</strong>
+<td>
   <%= @doctor.email %>
-</p>
+</td>
 
-<p>
-  <strong>Doc office no:</strong>
+<td>
   <%= @doctor.doc_office_no %>
-</p>
+</td>
 
-<p>
-  <strong>Doc fee:</strong>
+<td>
   <%= @doctor.doc_fee %>
-</p>
+</td>
 
-<p>
-  <strong>Specialty:</strong>
-  <%= @doctor.specialty %>
-</p>
-
+<td>
+  <%= @doctor.specialty.sp_name %>
+</td>
+</tr>
+</tbody>
+</table>
 <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
 <%= link_to 'Back', doctors_path %>

@@ -1,14 +1,21 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Md name:</strong>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Describtion</th>
+    </tr>
+  </thead>
+  <tbody>
+<td>
   <%= @medication.md_name %>
-</p>
+</td>
 
-<p>
-  <strong>Md description:</strong>
+<td>
   <%= @medication.md_description %>
-</p>
+</td>
+</tbody>
+</table>
 
 <%= link_to 'Edit', edit_medication_path(@medication) %> |
 <%= link_to 'Back', medications_path %>

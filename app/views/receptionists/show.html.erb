@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Rec name:</strong>
-  <%= @receptionist.rec_name %>
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>email</th>
+    </tr>
+  </thead>
+  <tbody>
 
-<p>
-  <strong>email:</strong>
+<td>
+  <%= @receptionist.rec_name %>
+</td>
+
+<td>
   <%= @receptionist.email %>
-</p>
+</td>
+</tbody>
+<table>
 
 <%= link_to 'Edit', edit_receptionist_path(@receptionist) %> |
 <%= link_to 'Back', receptionists_path %>

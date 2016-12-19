@@ -1,29 +1,36 @@
 <p id="notice"><%= notice %></p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Dcotor</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Receptionist</th>
+    </tr>
+  </thead>
+  <tbody>
+<td>
+  <%= @appointment.patient.pat_name %>
+</td>
 
-<p>
-  <strong>Patient:</strong>
-  <%= @appointment.patient %>
-</p>
+<td>
+  <%= @appointment.doctor.doc_name %>
+</td>
 
-<p>
-  <strong>Doctor:</strong>
-  <%= @appointment.doctor %>
-</p>
-
-<p>
-  <strong>Ap date:</strong>
+<td>
   <%= @appointment.ap_date %>
-</p>
+</td>
 
-<p>
-  <strong>Ap time:</strong>
+<td>
   <%= @appointment.ap_time %>
-</p>
+</td>
 
-<p>
-  <strong>Receptionist:</strong>
-  <%= @appointment.receptionist %>
-</p>
+<td>
+  <%= @appointment.receptionist.rec_name %>
+</td>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
 <%= link_to 'Back', appointments_path %>
