@@ -30,6 +30,7 @@ class ReceptionistsController < ApplicationController
 
     respond_to do |format|
       if @receptionist.save
+        log_in_receptionist @receptionist
         format.html { redirect_to @receptionist, notice: 'Receptionist was successfully created.' }
         format.json { render :show, status: :created, location: @receptionist }
       else
