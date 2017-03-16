@@ -28,6 +28,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manue <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to "new prescribtion", new_prescribtion_path %></li>
+            <li><%= link_to "Appointments", appointments_path %></li>
           </ul>
         </li>
         <% elsif logged_in_receptionist? %>
@@ -39,6 +40,7 @@
             <li><%= link_to "Register Patient", new_patient_path %></li>
             <li><%= link_to "New appointment", new_appointment_path %></li>
             <li><%= link_to "add medication", new_medication_path%></li>
+            <li><%= link_to "Appointments", appointments_path %></li>
           </ul>
         </li>
         <% else %>
