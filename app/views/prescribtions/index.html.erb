@@ -14,8 +14,8 @@
   <tbody>
     <% @prescribtions.each do |prescribtion| %>
       <tr>
-        <td><%= prescribtion.patient %></td>
-        <td><%= prescribtion.doctor %></td>
+        <td><%= prescribtion.patient.pat_name %></td>
+        <td><%= prescribtion.doctor.doc_name %></td>
         <td><%= link_to 'Show', prescribtion %></td>
         <td><%= link_to 'Edit', edit_prescribtion_path(prescribtion) %></td>
         <td><%= link_to 'Destroy', prescribtion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
